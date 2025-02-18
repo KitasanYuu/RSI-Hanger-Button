@@ -11,5 +11,5 @@ Like the StarCitizen, this plugin runs on a bug basis. If your RSI website has s
 All codes of this plugin are run in your own browser sandbox and no data will be uploaded.
 
 ### LICENSE
-Codes, without images resources is licensed by [GLWTPL](https://github.com/cfdxkk/RSI-Hanger-Button/blob/master/LICENSE).  
+Codes, without images resources is licensed by [GLWTPL](https://github.com/cfdxkk/RSI-Hangar-Button/blob/master/LICENSE).  
 
