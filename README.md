@@ -7,7 +7,7 @@
 Add a hange(a)r button for the drawer of the RSI website.   
 (Solved the issue of elevator getting stuck)
 
-Like the StarCitizen, this plugin runs on bugs. If your RSI website has any glitch errors, please uninstall this extension and refresh.
+Like the StarCitizen, this extension runs based on bugs. If your RSI website has any glitch errors, please uninstall this extension and refresh.
 
 It is not clear whether the use of the plugin violates the ToS. You use the plugin voluntarily, and any losses caused by the use of the plugin are borne by you.
 
