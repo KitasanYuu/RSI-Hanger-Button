@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "RSI-Hanger-Button",
+  "version": "1.0",
+  "description": "Add a button to your hangar for the drawer of the RSI website, (Solved the issue of elevator getting stuck)",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["robertsspaceindustries.com"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
