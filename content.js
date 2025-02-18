@@ -62,11 +62,11 @@
 		// 查找按钮中的文本部分
 		const hangarButtonText = hangarButton.querySelector('span[data-cy-id="button__text"]')
 		if (hangarButtonText) {
-			hangarButtonText.innerText = "Your Hanger"
+			hangarButtonText.innerText = "Your hangar"
 		}
 
 		// 修改文本
-		hangarButtonText.innerText = "Your Hanger"
+		hangarButtonText.innerText = "Your hangar"
 
 		// 插入到目标元素的前方
 		button.parentNode.insertBefore(hangarButton, button)
