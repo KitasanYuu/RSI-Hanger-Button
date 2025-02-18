@@ -61,12 +61,19 @@
 
 		// 查找按钮中的文本部分
 		const hangarButtonText = hangarButton.querySelector('span[data-cy-id="button__text"]')
+
+		// 修改文本
 		if (hangarButtonText) {
 			hangarButtonText.innerText = "Your hangar"
 		}
 
-		// 修改文本
-		hangarButtonText.innerText = "Your hangar"
+		// 查找按钮中的图标部分
+		const hangarButtonIcon = hangarButton.querySelector('i[data-cy-id="button__icon"]')
+
+		// 修改图标
+		if (hangarButtonIcon) {
+			hangarButtonIcon.className = "a-button__icon a-icon -gridView"
+		}
 
 		// 插入到目标元素的前方
 		button.parentNode.insertBefore(hangarButton, button)
