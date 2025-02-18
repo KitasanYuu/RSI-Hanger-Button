@@ -6,7 +6,7 @@
   "permissions": ["activeTab"],
   "content_scripts": [
     {
-      "matches": ["robertsspaceindustries.com"],
+      "matches": ["https://robertsspaceindustries.com"],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
