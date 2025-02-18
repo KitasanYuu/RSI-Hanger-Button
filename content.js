@@ -1,45 +1,72 @@
 // content.js
 (function() {
-  const risSidePanel = document.getElementById('sidePanel')
+  /**
+   * 寻找元素直到元素被加载
+   * @param dom 查找的根元素
+   * @param selector 元素的查找
+   * @param callback 查找到的回调
+   * @param interval 查找的间隔，默认 100 毫秒
+   */
+  function waitForElement(dom, selector, callback, interval = 100) {
+    const checkExist = setInterval(() => {
+      const element = dom.querySelector(selector);
+      if (element) {
+        clearInterval(checkExist); // 停止轮询
+        callback(element);
+      }
+    }, interval);
+  }
 
-  // 创建一个 MutationObserver 实例，监听元素的子元素变化
-  const observer = new MutationObserver((mutationsList) => {
-    for (const mutation of mutationsList) {
+  /**
+   * 开始监听抽屉，如果监听到点击事件，则添加按钮
+   * @param element 
+   */
+  function startObserve(element) {
+    // 创建一个 MutationObserver 实例，监听元素的子元素变化
+    const observer = new MutationObserver((mutationsList) => {
+      for (const mutation of mutationsList) {
         if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-            mutation.addedNodes.forEach(node => {
-                if (node.nodeType === 1) { // 只处理元素节点 (忽略文本节点)
-                    console.log('检测到新增子元素:', node)
-                }
-            })
+          mutation.addedNodes.forEach(node => {
+            if (node.nodeType === 1) { // 只处理元素节点 (忽略文本节点)
+							waitForElement(node, "a[data-cy-id=\"button\"][href=\"/account/settings\"]", (button) => {
+								copyAndAddButton(button)
+							});
+            }
+          })
         }
+      }
+    })
+
+    // 启动监听
+    observer.observe(element, { childList: true });
+  }
+
+	/**
+	 * 复制原有按钮，将其修改为机库按钮并插入到原来的按钮的上方
+	 * @param rsiSidePanel 侧边抽屉 dom
+	 */
+  function copyAndAddButton(button) {
+		console.log('bbbbbbbbbbbbbb', button)
+    if (button) {
+      // 复制元素
+      const hangarButton = button.cloneNode(true);
+
+      // 修改 href
+      hangarButton.href = "/account/pledges";
+
+			// 查找按钮的文本部分的 dom
+			const hangarButtonText = hangarButton.querySelector('span[data-cy-id="button__text"]');
+
+			// 修改文本
+			hangarButtonText.innerText = "Your Hanger"
+
+      // 插入到目标元素的前方
+      button.parentNode.insertBefore(hangarButton, button);
     }
-  })
+  }
 
-  // 启动监听
-  observer.observe(targetNode, { childList: true });
-
-  // // 创建按钮元素
-  // const button = document.createElement('button');
-  // button.innerText = '点击我';
-
-  // // 设置按钮样式（固定定位在页面右下角）
-  // button.style.position = 'fixed';
-  // button.style.bottom = '20px';
-  // button.style.right = '20px';
-  // button.style.padding = '10px 20px';
-  // button.style.zIndex = '10000';
-  // button.style.backgroundColor = '#4CAF50';
-  // button.style.color = '#fff';
-  // button.style.border = 'none';
-  // button.style.borderRadius = '5px';
-  // button.style.cursor = 'pointer';
-  // button.style.boxShadow = '0 2px 6px rgba(0,0,0,0.3)';
-
-  // // 为按钮添加点击事件
-  // button.addEventListener('click', function() {
-  //   alert('按钮被点击了！');
-  // });
-
-  // // 将按钮添加到页面中
-  // document.body.appendChild(button);
+  // 开始查找抽屉，如果找到执行监听回调
+  waitForElement(document, "#sidePanel", (risSidePanel) => {
+    startObserve(risSidePanel)
+  });
 })();
