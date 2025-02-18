@@ -1,4 +1,4 @@
-## RSI hangar Button
+## RSI Hangar Button
 
 <img id="img1" align="right" src="https://github.com/user-attachments/assets/2fa703df-9847-4c8c-91b9-73bc6e876809" width="35%" style="margin-top: 20px; border-radius: 10px 10px">
 
