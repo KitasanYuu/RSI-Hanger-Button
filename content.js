@@ -64,7 +64,7 @@
 
 		// 修改文本
 		if (hangarButtonText) {
-			hangarButtonText.innerText = "Your hangar"
+			hangarButtonText.innerText = "Your Hangar"
 		}
 
 		// 查找按钮中的图标部分
