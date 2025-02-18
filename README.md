@@ -16,7 +16,7 @@ All codes of this plugin are run in your own browser sandbox and no data will be
 
 
 ### LICENSE
-Codes, without images resources is licensed by [GLWTPL](https://github.com/cfdxkk/RSI-Hangar-Button/blob/master/LICENSE). 
+Codes, without images resources are licensed by [GLWTPL](https://github.com/cfdxkk/RSI-Hangar-Button/blob/master/LICENSE). 
 \
 \
 <img id="img1" align="left" src="https://github.com/user-attachments/assets/cdabb6db-2027-4cb2-93f0-4a86da3b472f" width="30%" style="margin-top: 20px; border-radius: 10px 10px">
