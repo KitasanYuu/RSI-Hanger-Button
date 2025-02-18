@@ -2,3 +2,7 @@
 
 # RSI-Hanger-Button
 Add a button to your hangar for the drawer of the RSI website, (Solved the issue of elevator getting stuck)
+
+## LICENSE
+Codes, without images resources is licensed by [GLWTPL](https://github.com/cfdxkk/RSI-Hanger-Button/blob/master/LICENSE).  
+Image resources come from the internet.
