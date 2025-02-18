@@ -1,6 +1,6 @@
 ## RSI Hangar Button
 
-<img id="img1" align="right" src="https://github.com/user-attachments/assets/2fa703df-9847-4c8c-91b9-73bc6e876809" width="300px" style="margin-top: 20px; border-radius: 10px 10px">
+<img id="img1" align="right" src="https://github.com/user-attachments/assets/2fa703df-9847-4c8c-91b9-73bc6e876809" width="290px" style="margin-top: 20px; border-radius: 10px 10px">
 
 <img id="img1" align="left" src="cover.png" width="50px" style="margin-top: 20px; border-radius: 10px 10px">
 
