@@ -12,7 +12,7 @@ Like the StarCitizen, this extension runs based on bugs. If your RSI website has
 It is not clear whether the use of the plugin violates the ToS. You use the plugin voluntarily, and any losses caused by the use of the plugin are borne by you.
 
 ### Security
-All codes of this plugin are run in your own browser sandbox and no data will be uploaded.
+All codes of this extension are run in your own browser sandbox and no data will be uploaded.
 
 
 ### LICENSE
